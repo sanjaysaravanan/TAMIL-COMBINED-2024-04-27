@@ -1,0 +1,106 @@
+
+Topics:  
+
+  axios instead of fetch
+
+    Axios vs Fetch
+
+      Axios - separate library which helps in handling API requests and other API related operations
+
+        Instance: axios allows to keep multiple instances ( Multiple server instances with separate configurations )
+
+          Eg:
+            E-Commerce:
+              Products: https://products.amazon.com/products
+                Images, comments, reviews
+                Deals a very huge amount of data
+                Timeout may a bit more than the others
+
+              Account: https://account.amazon.com
+
+              Payment: https://payment.amazon.com
+
+        It uses XHR for api interaction
+
+        Reduces the JSON.stringfy and JSON.parsing ( response.json() )
+
+        Interceptors:
+          added advantage where we can intercept both request & response
+
+      Fetch - JavaScript inbuilt API/fetch for handling API requests & other API related operations
+
+      Fetch is also capable of doing all the things that axios can do
+
+      But axios do those in a simpler way
+
+  Redux:
+  
+    External library for state management using different reducers
+
+    Install the package with ---> npm install @reduxjs/toolkit
+    react-redux
+    Chrome-Extension - redux-devtools
+
+    Process:
+      1. Store Setup with initial State and reducers
+        for manipulation of the store 
+          1. Store Setup
+          2. Reducers to feeded to the store
+          3. Actions to be executed on reducers
+      2. Actions ()
+      3. Reducers ()
+      4. Consume the store values - Subscription
+        hook in react-redux called as useSelector
+      5. Dispatch --> action
+         hook in react-redux called as useDispatch
+
+  useReducer ( Redux like hook which help understanding redux )
+
+  Large Applications uses Redux to Manage the 
+    State, Actions, Data as a whole
+  
+  Example:
+    Assume Gmail Application ( Doesn't Mean Gamil use Redux ) 
+    uses a lot of components
+      1. User ( mailid )
+      2. Compose ( Subject, To, CC, BCC )
+      3. Drafts ( Mail which is unfinished ) --> Drafts Count Increases
+      4. Categories, Junk, Starred, Important, Chats.
+    
+    Also, Jira Board
+
+    Above entities/features of application uses different types of Desgin, Interactions, States from minor/small frontend actions
+
+    This case managing the state/data only with basic state( state, reducer, context) on inidividual components and passing the data to the required components is very difficult
+
+    May lead to props drilling or more num of callbacks/re-renders
+
+    So, 
+    should we use redux everywhere for state managment in large applications
+
+    everywhere redux should we use redux ?
+    Ans: Depends on the size of the application & the Team's discussion and decision
+
+Task:
+
+  Day 28:
+    Same task as previous task, but do it with redux.
+    https://docs.google.com/document/d/1XX6bLW3MsJUGbnxl_PKW5POFe55Zxo590V24GNeSChY/edit#heading=h.fyv6vm4v13li
+
+Next Session:
+
+  useLayoutEffect
+  useCallback
+  useMemo
+  lazy and suspense
+
+  Form Validation
+
+  Formik:
+    External Library provides hooks for handling form validations
+    Makes form validations easy
+
+    Form Handling Library with useFull hooks 
+    designed to handle form validations
+
+    Yup: schema validation library usefull with formik or schema related structures
